@@ -1,1 +1,0 @@
-subnet 7.8.9.128 netmask 255.255.255.192 { range 7.8.9.129 7.8.9.189;    option routers 7.8.9.190; } 

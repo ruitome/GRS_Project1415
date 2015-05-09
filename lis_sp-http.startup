@@ -1,6 +1,0 @@
-ip addr add dev eth0 1.2.3.131/26
-ip link set dev eth0 up
-
-/etc/init.d/apache2 start
-a2enmod userdir
-/etc/init.d/apache2 restart

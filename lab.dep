@@ -1,5 +1,0 @@
-lis_sa-pc-admin:lis_sa-switch lis_router-core
-lis_sa-pc-rh:lis_sa-switch lis_router-core
-lis_sa-pc-cont:lis_sa-switch lis_router-core
-lis_log-pc2: lis_log-switch lis_router-core
-lis_log-pc1: lis_log-switch lis_router-core
