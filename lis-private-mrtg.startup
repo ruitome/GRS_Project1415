@@ -1,0 +1,18 @@
+ip addr add dev eth0 192.168.0.2/19
+ip link set dev eth0 up
+ip route add default via 192.168.31.254
+
+/etc/init.d/apache2 start
+/etc/init.d/snmpd start
+
+env LANG=C /usr/bin/mrtg --daemon /root/lis-router-core.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/lis-router-net.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/lis-private-mrtg.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/lis-private-backup.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/lis-sp-dns-xpto.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/lis-sp-email.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/lis-sp-http.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/por-log-router.cfg
+env LANG=C /usr/bin/mrtg --daemon /root/far-log-router.cfg
+
+indexmaker /root/lis-router-core.cfg /root/lis-router-net.cfg /root/lis-private-mrtg.cfg /root/lis-private-backup.cfg /root/lis-sp-dns-xpto.cfg /root/lis-sp-email.cfg /root/lis-sp-http.cfg /root/por-log-router.cfg /root/far-log-router.cfg --output=/var/www/index.html

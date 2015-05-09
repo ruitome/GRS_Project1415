@@ -1,0 +1,17 @@
+$TTL   60000
+@               IN      SOA     net-dns-pt.pt.    root.net-dns-pt.pt. (
+                        2006031201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@                   IN      NS      net-dns-pt.pt.
+net-dns-pt             IN      A       1.2.64.3
+
+xpto            IN      NS      lis-sp-dns-xpto.xpto.pt.
+lis-sp-dns-xpto.xpto     IN      A       1.2.3.129
+;lis-sp-email.xpto     IN      A       1.2.3.130
+
+acme 	IN      NS     net-http.acme.pt.
+net-http.acme 	IN      A       1.2.64.1

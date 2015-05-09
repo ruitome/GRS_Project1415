@@ -1,0 +1,5 @@
+ip addr add dev eth0 1.2.64.3/24
+ip link set dev eth0 up
+ip route add default via 1.2.64.254
+
+/etc/init.d/bind start

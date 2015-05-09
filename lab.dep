@@ -1,0 +1,7 @@
+far-log-pc1 far-log-pc2: far-log-router far-log-switch
+
+por-log-pc1 por-log-pc2: por-log-router por-log-switch
+
+lis-log-pc1 lis-log-pc2: lis-router-core lis-log-switch
+
+lis-sa-admin lis-sa-cont lis-sa-rh: lis-router-core lis-sa-switch

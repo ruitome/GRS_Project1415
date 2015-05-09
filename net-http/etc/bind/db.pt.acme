@@ -1,0 +1,21 @@
+$TTL    60000
+@               IN      SOA     net-http.acme.pt.    root.net-http.acme.pt. (
+                        2006031201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@               IN      NS      net-http.acme.pt.
+@               IN      MX 5      mail.acme.pt.
+net-http          IN      A       1.2.64.1
+
+www				IN      A       1.2.64.1
+
+imap		IN	A	1.2.64.1
+pop		IN	A	1.2.64.1
+mail		IN	A	1.2.64.1
+
+
+
+

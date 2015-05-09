@@ -1,0 +1,10 @@
+ip addr add dev eth0 1.2.3.131/26
+ip link set dev eth0 up
+ip route add default via 1.2.3.190
+
+/etc/init.d/apache2 start
+a2ensite xpto.pt.conf
+a2ensite clientes.xpto.pt.conf
+/etc/init.d/apache2 reload
+
+/etc/init.d/snmpd start
