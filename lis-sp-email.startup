@@ -16,6 +16,8 @@ chmod go-rw /etc/exim4/exim4.conf
 /etc/init.d/exim4 start
 /etc/init.d/inetd start
 
+#Pine Accounts
+
 adduser --disabled-password --gecos "" administracao
 echo "administracao:administracao" | chpasswd
 adduser --disabled-password --gecos "" contabilidade
@@ -28,3 +30,13 @@ adduser --disabled-password --gecos "" porto
 echo "porto:porto" | chpasswd
 adduser --disabled-password --gecos "" lisboa
 echo "lisboa:lisboa" | chpasswd
+
+#SSH
+
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" remoteadmin
+echo "remoteadmin:administrador" | chpasswd
+
+cd /home
+chown -R remoteadmin:remoteadmin remoteadmin
+chmod -R 700 remoteadmin/

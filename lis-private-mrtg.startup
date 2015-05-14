@@ -16,3 +16,12 @@ env LANG=C /usr/bin/mrtg --daemon /root/por-log-router.cfg
 env LANG=C /usr/bin/mrtg --daemon /root/far-log-router.cfg
 
 indexmaker /root/lis-router-core.cfg /root/lis-router-net.cfg /root/lis-private-mrtg.cfg /root/lis-private-backup.cfg /root/lis-sp-dns-xpto.cfg /root/lis-sp-email.cfg /root/lis-sp-http.cfg /root/por-log-router.cfg /root/far-log-router.cfg --output=/var/www/index.html
+
+#SSH
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" remoteadmin
+echo "remoteadmin:administrador" | chpasswd
+
+cd /home
+chown -R remoteadmin:remoteadmin remoteadmin
+chmod -R 700 remoteadmin/

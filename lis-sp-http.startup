@@ -8,3 +8,12 @@ a2ensite clientes.xpto.pt.conf
 /etc/init.d/apache2 reload
 
 /etc/init.d/snmpd start
+
+#SSH
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" remoteadmin
+echo "remoteadmin:administrador" | chpasswd
+
+cd /home
+chown -R remoteadmin:remoteadmin remoteadmin
+chmod -R 700 remoteadmin/

@@ -1,3 +1,16 @@
 ip addr add dev eth0 1.2.64.4/24
 ip link set dev eth0 up
 ip route add default via 1.2.64.254
+
+adduser --disabled-password --gecos "" networkadmin
+echo "networkadmin:netadmin" | chpasswd
+
+#go to home
+cd /home
+
+#owner
+chown -R networkadmin:networkadmin networkadmin
+#user permissions
+chmod -R u+rwX networkadmin
+#group permissions
+chmod -R go-rwX networkadmin

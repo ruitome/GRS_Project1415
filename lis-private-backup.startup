@@ -4,3 +4,12 @@ ip link set dev eth0 up
 ip route add default via 192.168.31.254
 
 /etc/init.d/snmpd start
+
+#SSH
+/etc/init.d/ssh start
+adduser --disabled-password --gecos "" remoteadmin
+echo "remoteadmin:administrador" | chpasswd
+
+cd /home
+chown -R remoteadmin:remoteadmin remoteadmin
+chmod -R 700 remoteadmin/
