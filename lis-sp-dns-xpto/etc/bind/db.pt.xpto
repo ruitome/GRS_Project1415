@@ -11,6 +11,9 @@ $TTL    60000
 @               IN      MX 5    mail
 lis-sp-dns-xpto IN      A       1.2.3.129
 lis-sp-email	IN		A		1.2.3.130
+lis-sp-http		IN		A		1.2.3.131
+lis-private-backup		IN		A		192.168.0.1
+lis-private-mrtg		IN		A		192.168.0.2
 www				IN      A       1.2.3.131
 clientes		IN      A       1.2.3.131
 
