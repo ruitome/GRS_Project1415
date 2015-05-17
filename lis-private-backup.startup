@@ -13,3 +13,5 @@ echo "remoteadmin:administrador" | chpasswd
 cd /home
 chown -R remoteadmin:remoteadmin remoteadmin
 chmod -R 700 remoteadmin/
+dpkg -i /sudo_1.6.9p17-3_i386.deb
+dpkg -i /rsync_3.0.3-2_i386.deb
