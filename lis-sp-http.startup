@@ -5,6 +5,7 @@ ip route add default via 1.2.3.190
 /etc/init.d/apache2 start
 a2ensite xpto.pt.conf
 a2ensite clientes.xpto.pt.conf
+a2enmod ssl
 /etc/init.d/apache2 reload
 
 /etc/init.d/snmpd start
@@ -18,10 +19,8 @@ cd /home
 chown -R remoteadmin:remoteadmin remoteadmin
 chmod -R 700 remoteadmin/
 
-chown -R remoteadmin:remoteadmin /var/www
-chmod -R 700 /var/www/
-
 # packages
 dpkg -i /sudo_1.6.9p17-3_i386.deb
 dpkg -i /rsync_3.0.3-2_i386.deb
 
+/etc/init.d/apache2 restart
