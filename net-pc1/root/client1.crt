@@ -1,0 +1,72 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PT, ST=Lisboa, L=Lisboa, O=IST-GRS, OU=GRS, CN=GRS/emailAddress=grs@tecnico.ulisboa.pt
+        Validity
+            Not Before: May 20 09:37:39 2015 GMT
+            Not After : May 17 09:37:39 2025 GMT
+        Subject: C=PT, ST=Lisboa, L=Lisboa, O=IST-GRS, OU=GRS, CN=GRS/emailAddress=grs@tecnico.ulisboa.pt
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:cc:c7:b3:8c:bb:5e:0e:f7:ec:f2:ed:6b:36:09:
+                    8a:b1:8d:4a:76:08:87:35:a5:1f:53:6e:12:ba:0f:
+                    6d:0f:7e:df:fc:1c:17:d6:c6:90:ad:9f:b2:18:6e:
+                    19:af:e4:87:17:05:52:55:d5:1c:82:8e:63:6b:3a:
+                    64:be:a7:e7:29:d9:50:bd:f8:c3:d1:79:ba:37:6e:
+                    7f:7b:14:ec:0c:64:22:55:a5:74:07:dd:c7:e4:40:
+                    18:c7:7c:94:83:7a:58:1a:03:08:b8:71:81:08:57:
+                    05:1b:01:bd:43:6e:64:f2:b3:fc:61:83:df:1f:8d:
+                    70:41:b3:a9:74:18:6e:f6:05
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                9E:3D:E3:86:2E:14:9C:25:BF:0A:3F:41:82:C0:E1:39:6A:FF:F6:D1
+            X509v3 Authority Key Identifier: 
+                keyid:23:C7:4E:F2:04:0F:71:05:F1:A6:B1:AE:3C:B3:2A:67:49:7F:59:55
+                DirName:/C=PT/ST=Lisboa/L=Lisboa/O=IST-GRS/OU=GRS/CN=GRS/emailAddress=grs@tecnico.ulisboa.pt
+                serial:B7:9E:63:02:05:32:49:1D
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+        89:3e:e7:45:56:d1:95:14:91:6b:83:9b:39:a1:43:7d:f2:bf:
+        3e:d5:f7:cb:2b:a5:58:e7:4f:6c:c6:e5:12:ec:67:3e:71:65:
+        c3:83:c9:f4:e5:d3:b6:15:fe:31:40:a9:29:11:7e:75:4a:4c:
+        11:5c:db:49:42:0c:25:4b:72:25:4e:93:24:10:bb:dd:1a:7b:
+        53:3a:d9:85:17:0a:d1:5b:f5:fd:53:94:73:a8:22:10:82:9c:
+        67:19:6d:66:a6:54:a7:ef:9e:a6:7f:0a:99:18:18:fe:29:c9:
+        9a:72:75:b7:f6:92:ee:79:e4:a4:e9:5c:27:b1:4b:92:48:ef:
+        1e:e8
+-----BEGIN CERTIFICATE-----
+MIIDvTCCAyagAwIBAgIBAjANBgkqhkiG9w0BAQUFADCBhDELMAkGA1UEBhMCUFQx
+DzANBgNVBAgTBkxpc2JvYTEPMA0GA1UEBxMGTGlzYm9hMRAwDgYDVQQKEwdJU1Qt
+R1JTMQwwCgYDVQQLEwNHUlMxDDAKBgNVBAMTA0dSUzElMCMGCSqGSIb3DQEJARYW
+Z3JzQHRlY25pY28udWxpc2JvYS5wdDAeFw0xNTA1MjAwOTM3MzlaFw0yNTA1MTcw
+OTM3MzlaMIGEMQswCQYDVQQGEwJQVDEPMA0GA1UECBMGTGlzYm9hMQ8wDQYDVQQH
+EwZMaXNib2ExEDAOBgNVBAoTB0lTVC1HUlMxDDAKBgNVBAsTA0dSUzEMMAoGA1UE
+AxMDR1JTMSUwIwYJKoZIhvcNAQkBFhZncnNAdGVjbmljby51bGlzYm9hLnB0MIGf
+MA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMx7OMu14O9+zy7Ws2CYqxjUp2CIc1
+pR9TbhK6D20Pft/8HBfWxpCtn7IYbhmv5IcXBVJV1RyCjmNrOmS+p+cp2VC9+MPR
+ebo3bn97FOwMZCJVpXQH3cfkQBjHfJSDelgaAwi4cYEIVwUbAb1DbmTys/xhg98f
+jXBBs6l0GG72BQIDAQABo4IBOzCCATcwCQYDVR0TBAIwADAtBglghkgBhvhCAQ0E
+IBYeRWFzeS1SU0EgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBSePeOG
+LhScJb8KP0GCwOE5av/20TCBuQYDVR0jBIGxMIGugBQjx07yBA9xBfGmsa48sypn
+SX9ZVaGBiqSBhzCBhDELMAkGA1UEBhMCUFQxDzANBgNVBAgTBkxpc2JvYTEPMA0G
+A1UEBxMGTGlzYm9hMRAwDgYDVQQKEwdJU1QtR1JTMQwwCgYDVQQLEwNHUlMxDDAK
+BgNVBAMTA0dSUzElMCMGCSqGSIb3DQEJARYWZ3JzQHRlY25pY28udWxpc2JvYS5w
+dIIJALeeYwIFMkkdMBMGA1UdJQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDAN
+BgkqhkiG9w0BAQUFAAOBgQCJPudFVtGVFJFrg5s5oUN98r8+1ffLK6VY509sxuUS
+7Gc+cWXDg8n05dO2Ff4xQKkpEX51SkwRXNtJQgwlS3IlTpMkELvdGntTOtmFFwrR
+W/X9U5RzqCIQgpxnGW1mplSn756mfwqZGBj+KcmacnW39pLueeSk6VwnsUuSSO8e
+6A==
+-----END CERTIFICATE-----
