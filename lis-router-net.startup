@@ -21,31 +21,29 @@ iptables -A FORWARD -i eth1 -j ACCEPT
 
 ################
 #Servidores web publicos->dois lados
-iptables -A FORWARD -i eth0 -p tcp --dport 80 -d 1.2.3.131 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 80 -d 1.2.3.131 -j ACCEPT
 
 ################3
 #Https para o site dos clientes->dois lados
-iptables -A FORWARD -i eth0 -p tcp --dport 443 -d 1.2.3.131 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 443 -d 1.2.3.131 -j ACCEPT
 
 ################
 #IMAP
-iptables -A FORWARD -i eth0 -p tcp --dport 143 -d 1.2.3.130 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 143 -d 1.2.3.130 -j ACCEPT
 
 ################
 #POP3
-iptables -A FORWARD -i eth0 -p tcp --dport 110 -d 1.2.3.130 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 110 -d 1.2.3.130 -j ACCEPT
 
 ################
 #SMTP->dois lados
-iptables -A FORWARD -i eth0 -p tcp --dport 25 -d 1.2.3.130 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 25 -d 1.2.3.130 -j ACCEPT
 
 ################
 #Servidores de DNS -> UDP pelos dois sentidos
 iptables -A FORWARD -p udp -i eth1 --dport 53 -d 1.2.3.130 -j ACCEPT
-iptables -A FORWARD -p udp -o eth1 --sport 53 -d 1.2.3.130 -j ACCEPT
 
 iptables -A FORWARD -p udp -i eth0 --dport 53 -d 1.2.3.130 -j ACCEPT
-iptables -A FORWARD -p udp -o eth0 --sport 53 -d 1.2.3.130 -j ACCEPT
 
 ################
 #VPN?
