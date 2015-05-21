@@ -9,7 +9,7 @@ ip route add default via 1.2.65.2
 /etc/init.d/zebra start
 /etc/init.d/snmpd start
 
-################
+################################################
 #Firewall
 
 #apagar as regras existentes
@@ -17,68 +17,57 @@ iptables -F
 
 #regras default para resposta
 iptables -A FORWARD -i eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
-iptables -A FORWARD -i eth1 -m state --state RELATED,ESTABLISHED -j ACCEPT
-
-################
-#ICMP-> Apenas para fora da rede xpto
-iptables -A FORWARD -p icmp --icmp-type echo-request -j ACCEPT -i eth1
-iptables -A FORWARD -p icmp --icmp-type echo-reply -j ACCEPT -i eth0
+iptables -A FORWARD -i eth1 -j ACCEPT
 
 ################
 #Servidores web publicos->dois lados
-iptables -A FORWARD -i eth1 -p tcp --dport 80 -d 1.2.3.131 -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -i eth0 -p tcp --dport 80 -d 1.2.3.131 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 ################3
 #Https para o site dos clientes->dois lados
 iptables -A FORWARD -i eth0 -p tcp --dport 443 -d 1.2.3.131 -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -A FORWARD -i eth1 -p tcp --dport 443 -d 1.2.3.131 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 ################
 #IMAP
-iptables -A FORWARD -i eth1 -p tcp --dport 143 -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -A FORWARD -i eth0 -p tcp --dport 143 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 143 -d 1.2.3.130 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 ################
 #POP3
-iptables -A FORWARD -i eth1 -p tcp --dport 110 -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -A FORWARD -i eth0 -p tcp --dport 110 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 110 -d 1.2.3.130 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 ################
-#SSH
-iptables -A FORWARD -i eth1 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -A FORWARD -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+#SMTP->dois lados
+iptables -A FORWARD -i eth0 -p tcp --dport 25 -d 1.2.3.130 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 ################
 #Servidores de DNS -> UDP pelos dois sentidos
-iptables -A FORWARD -p udp -i eth1 --dport 53 -j ACCEPT
-iptables -A FORWARD -p udp -o eth1 --sport 53 -j ACCEPT
+iptables -A FORWARD -p udp -i eth1 --dport 53 -d 1.2.3.130 -j ACCEPT
+iptables -A FORWARD -p udp -o eth1 --sport 53 -d 1.2.3.130 -j ACCEPT
 
-iptables -A FORWARD -p udp -i eth0 --dport 53 -j ACCEPT
-iptables -A FORWARD -p udp -o eth0 --sport 53 -j ACCEPT
+iptables -A FORWARD -p udp -i eth0 --dport 53 -d 1.2.3.130 -j ACCEPT
+iptables -A FORWARD -p udp -o eth0 --sport 53 -d 1.2.3.130 -j ACCEPT
 
+################
 #VPN?
 ###################################
 #iptables -A FORWARD -p tcp -i tun0 --dport 22 -j ACCEPT
 #iptables -A FORWARD -p tcp -o tun0 --sport 22 -j ACCEPT
 ###################################
 
-################
-#SMTP->dois lados
-iptables -A FORWARD -i eth1 -p tcp --dport 25 -m state --state NEW,ESTABLISHED -j ACCEPT
-iptables -A FORWARD -i eth0 -p tcp --dport 25 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 ################
 #regras default
 iptables -A FORWARD -j REJECT
+################
 
+
+################################################
 # VPN
 #cd /etc/openvpn/
 #openvpn server.conf &
 #^C
 
+################################################
 #NAT
-iptables -t nat -s 192.168.0.0/19 -A POSTROUTING -o eth0 -j MASQUERADE 
-iptables -t nat -s 192.168.32.0/19 -A POSTROUTING -o eth0 -j MASQUERADE 
-iptables -t nat -s 192.168.64.0/19 -A POSTROUTING -o eth0 -j MASQUERADE 
-iptables -t nat -s 192.168.96.0/19 -A POSTROUTING -o eth0 -j MASQUERADE 
+iptables -t nat -s 192.168.0.0/16 -A POSTROUTING -o eth0 -j MASQUERADE  
+################################################
