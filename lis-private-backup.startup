@@ -18,5 +18,13 @@ chmod -R 700 remoteadmin/
 dpkg -i /sudo_1.6.9p17-3_i386.deb
 dpkg -i /rsync_3.0.3-2_i386.deb
 
-# crontab
-crontab /home/remoteadmin/backup
+
+#user permissions
+chmod -R u+rwX /root/.ssh
+#group permissions
+chmod -R go-rwX /root/.ssh
+
+#Backups
+chmod 600 /var/spool/cron/crontabs/root
+/etc/init.d/cron start
+
