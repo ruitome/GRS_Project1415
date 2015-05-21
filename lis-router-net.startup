@@ -45,6 +45,11 @@ iptables -A FORWARD -i eth1 -p tcp --dport 110 -m state --state NEW,ESTABLISHED 
 iptables -A FORWARD -i eth0 -p tcp --dport 110 -m state --state NEW,ESTABLISHED -j ACCEPT
 
 ################
+#SSH
+iptables -A FORWARD -i eth1 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+################
 #Servidores de DNS -> UDP pelos dois sentidos
 iptables -A FORWARD -p udp -i eth1 --dport 53 -j ACCEPT
 iptables -A FORWARD -p udp -o eth1 --sport 53 -j ACCEPT
