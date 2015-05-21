@@ -1,0 +1,1 @@
+![topologia.png](https://bitbucket.org/repo/Lxd6Rb/images/1864387926-topologia.png)
