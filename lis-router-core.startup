@@ -29,5 +29,4 @@ ip route add default via 1.2.3.2
 /etc/init.d/zebra start
 /etc/init.d/snmpd start
 
-#NAT
-iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE 
+
