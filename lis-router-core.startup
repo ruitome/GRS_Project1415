@@ -29,4 +29,6 @@ ip route add default via 1.2.3.2
 /etc/init.d/zebra start
 /etc/init.d/snmpd start
 
+chmod 700 /etc/openvpn/server.key
+openvpn --config /etc/openvpn/server.conf --daemon
 

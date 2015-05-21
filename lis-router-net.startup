@@ -1,4 +1,4 @@
-ip addr add dev eth0 1.2.65.3/29
+ip addr add dev eth0 1.2.65.1/30
 ip link set dev eth0 up
 
 ip addr add dev eth1 1.2.3.2/30
@@ -47,21 +47,15 @@ iptables -A FORWARD -p udp -i eth0 --dport 53 -d 1.2.3.130 -j ACCEPT
 
 ################
 #OpenVPN
-iptables -A FORWARD -p udp -i eth0 --dport 1194 -d 1.2.3.1 -j ACCEPT
+iptables -A FORWARD -p udp -i eth0 --dport 1194 -d 1.2.3.193 -j ACCEPT
 
 ################
 #regras default
 iptables -A FORWARD -j REJECT
 ################
 
-
-################################################
-# VPN
-#cd /etc/openvpn/
-#openvpn server.conf &
-#^C
-
 ################################################
 #NAT
 iptables -t nat -s 192.168.0.0/16 -A POSTROUTING -o eth0 -j MASQUERADE  
 ################################################
+

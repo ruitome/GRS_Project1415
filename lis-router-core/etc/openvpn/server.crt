@@ -1,0 +1,74 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PT, ST=Lisboa, L=Lisboa, O=IST, OU=GRS, CN=GRS/emailAddress=grs@tecnico.ulisboa.pt
+        Validity
+            Not Before: May 21 16:53:07 2015 GMT
+            Not After : May 18 16:53:07 2025 GMT
+        Subject: C=PT, ST=Lisboa, L=Lisboa, O=IST, OU=GRS, CN=GRS/emailAddress=grs@tecnico.ulisboa.pt
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:cb:8f:38:dc:b2:f9:68:f2:01:f3:72:05:60:14:
+                    57:5b:64:0e:9e:ed:78:80:85:24:73:aa:a8:4e:41:
+                    59:23:a2:13:ae:58:85:57:27:09:6a:f8:9c:9a:46:
+                    47:3c:ef:c7:de:04:a6:ea:ea:ba:47:a5:b0:e9:e3:
+                    5b:35:a3:95:32:6f:4a:02:bb:10:24:66:e2:1f:c0:
+                    75:8e:07:79:c5:9e:f0:90:3d:74:bd:10:b0:d3:2d:
+                    84:07:3a:36:f9:fe:a2:28:d1:35:47:16:b0:2a:55:
+                    81:80:eb:73:f0:33:b5:16:ae:30:6a:2d:7b:ef:f0:
+                    1c:56:b6:28:46:9f:01:07:03
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Cert Type: 
+                SSL Server
+            Netscape Comment: 
+                Easy-RSA Generated Server Certificate
+            X509v3 Subject Key Identifier: 
+                36:19:58:AE:79:5D:06:C9:B1:59:49:9D:A4:5A:C6:8C:05:F5:62:78
+            X509v3 Authority Key Identifier: 
+                keyid:43:0E:99:9A:2A:37:88:C7:E9:DD:8F:80:D5:40:65:CC:EB:31:5F:F7
+                DirName:/C=PT/ST=Lisboa/L=Lisboa/O=IST/OU=GRS/CN=GRS/emailAddress=grs@tecnico.ulisboa.pt
+                serial:E4:9A:6F:CD:E0:D2:D2:32
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+    Signature Algorithm: sha1WithRSAEncryption
+        5d:57:7f:5a:07:43:26:5c:4c:73:ae:13:e0:94:d8:40:ac:8e:
+        7d:18:f7:af:c9:35:e4:22:ca:a4:f2:5e:c2:2b:ef:85:03:f9:
+        74:43:30:3c:07:23:3f:fd:58:26:13:6a:d4:de:52:8c:8e:fd:
+        e7:3c:35:38:47:21:fa:60:b1:49:55:a6:15:ab:29:c1:99:5d:
+        77:95:a5:5b:4b:55:1d:a2:6f:85:1f:ce:fb:85:01:7a:9c:8e:
+        c7:d8:b7:3f:7e:44:45:91:8e:13:a4:c9:67:1a:2e:88:a9:77:
+        50:54:ac:48:00:2f:e6:a7:37:c5:49:96:3f:26:6e:92:b5:e6:
+        b4:38
+-----BEGIN CERTIFICATE-----
+MIIDyzCCAzSgAwIBAgIBATANBgkqhkiG9w0BAQUFADCBgDELMAkGA1UEBhMCUFQx
+DzANBgNVBAgTBkxpc2JvYTEPMA0GA1UEBxMGTGlzYm9hMQwwCgYDVQQKEwNJU1Qx
+DDAKBgNVBAsTA0dSUzEMMAoGA1UEAxMDR1JTMSUwIwYJKoZIhvcNAQkBFhZncnNA
+dGVjbmljby51bGlzYm9hLnB0MB4XDTE1MDUyMTE2NTMwN1oXDTI1MDUxODE2NTMw
+N1owgYAxCzAJBgNVBAYTAlBUMQ8wDQYDVQQIEwZMaXNib2ExDzANBgNVBAcTBkxp
+c2JvYTEMMAoGA1UEChMDSVNUMQwwCgYDVQQLEwNHUlMxDDAKBgNVBAMTA0dSUzEl
+MCMGCSqGSIb3DQEJARYWZ3JzQHRlY25pY28udWxpc2JvYS5wdDCBnzANBgkqhkiG
+9w0BAQEFAAOBjQAwgYkCgYEAy4843LL5aPIB83IFYBRXW2QOnu14gIUkc6qoTkFZ
+I6ITrliFVycJavicmkZHPO/H3gSm6uq6R6Ww6eNbNaOVMm9KArsQJGbiH8B1jgd5
+xZ7wkD10vRCw0y2EBzo2+f6iKNE1RxawKlWBgOtz8DO1Fq4wai177/AcVrYoRp8B
+BwMCAwEAAaOCAVEwggFNMAkGA1UdEwQCMAAwEQYJYIZIAYb4QgEBBAQDAgZAMDQG
+CWCGSAGG+EIBDQQnFiVFYXN5LVJTQSBHZW5lcmF0ZWQgU2VydmVyIENlcnRpZmlj
+YXRlMB0GA1UdDgQWBBQ2GViueV0GybFZSZ2kWsaMBfVieDCBtQYDVR0jBIGtMIGq
+gBRDDpmaKjeIx+ndj4DVQGXM6zFf96GBhqSBgzCBgDELMAkGA1UEBhMCUFQxDzAN
+BgNVBAgTBkxpc2JvYTEPMA0GA1UEBxMGTGlzYm9hMQwwCgYDVQQKEwNJU1QxDDAK
+BgNVBAsTA0dSUzEMMAoGA1UEAxMDR1JTMSUwIwYJKoZIhvcNAQkBFhZncnNAdGVj
+bmljby51bGlzYm9hLnB0ggkA5JpvzeDS0jIwEwYDVR0lBAwwCgYIKwYBBQUHAwEw
+CwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBBQUAA4GBAF1Xf1oHQyZcTHOuE+CU2ECs
+jn0Y96/JNeQiyqTyXsIr74UD+XRDMDwHIz/9WCYTatTeUoyO/ec8NThHIfpgsUlV
+phWrKcGZXXeVpVtLVR2ib4UfzvuFAXqcjsfYtz9+REWRjhOkyWcaLoipd1BUrEgA
+L+anN8VJlj8mbpK15rQ4
+-----END CERTIFICATE-----
