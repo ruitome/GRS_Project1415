@@ -47,7 +47,8 @@ iptables -A FORWARD -p udp -i eth0 --dport 53 -d 1.2.3.130 -j ACCEPT
 
 ################
 #OpenVPN
-iptables -A FORWARD -p udp -i eth0 --dport 1194 -d 1.2.3.193 -j ACCEPT
+iptables -A FORWARD -p udp -i eth0 --dport 1194 -d 192.168.128.1 -j ACCEPT
+iptables -A FORWARD -i tun0 -j ACCEPT
 
 ################
 #regras default
