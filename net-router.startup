@@ -6,3 +6,4 @@ ip addr add dev eth1 1.2.65.2/30
 ip link set dev eth1 up
 
 ip route add default via 1.2.65.1
+
